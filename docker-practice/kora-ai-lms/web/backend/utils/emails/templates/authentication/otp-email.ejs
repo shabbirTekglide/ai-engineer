@@ -1,0 +1,47 @@
+<div class="main-container">
+  <%- include('../partials/header.ejs') %>
+
+    <div class="template-banner">
+      <div class="text-field">
+        <h1>Verify your OTP Code</h1>
+      </div>
+    </div>
+    <div class="template-container" style="padding: 0 !important">
+      <div class="inner-container">
+        <h2 class="message normal black text-center">Welcome to Rubitt 👋</h2>
+        <h2 class="message bold black text-center">Hi <%= name %>,</h2>
+        <p class="message normal black text-center">
+          Thanks for signing up for Rubitt! To finish creating your account, please
+          use the verification code below:
+        </p>
+        <h2 class="message bold black text-center">Your verification code:</h2>
+        <div class="otp-box">
+          <%= otp %>
+        </div>
+        <p class="message normal black text-center">
+          Enter this code in the app to verify your email address and continue
+          setting up your account.
+        </p>
+        <p class="message normal black text-center">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMjAiIGhlaWdodD0iMjAiPjxyZWN0IHg9IjQzIiB5PSI4IiB3aWR0aD0iMTQiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9IiMyMjIiLz48cmVjdCB4PSIyOCIgeT0iMTAiIHdpZHRoPSI2IiBoZWlnaHQ9IjEwIiByeD0iMyIgZmlsbD0iIzIyMiIgdHJhbnNmb3JtPSJyb3RhdGUoLTM1LCAzMSwgMTUpIi8+PHJlY3QgeD0iNjYiIHk9IjEwIiB3aWR0aD0iNiIgaGVpZ2h0PSIxMCIgcng9IjMiIGZpbGw9IiMyMjIiIHRyYW5zZm9ybT0icm90YXRlKDM1LCA2OSwgMTUpIi8+PGNpcmNsZSBjeD0iNTAiIGN5PSI1OCIgcj0iMzQiIGZpbGw9IiMyMjIiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjU4IiByPSIyOCIgZmlsbD0id2hpdGUiLz48bGluZSB4MT0iNTAiIHkxPSIzMiIgeDI9IjUwIiB5Mj0iMzciIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI1MCIgeTE9Ijc5IiB4Mj0iNTAiIHkyPSI4NCIgc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjIyIiB5MT0iNTgiIHgyPSIyNyIgeTI9IjU4IiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48bGluZSB4MT0iNzMiIHkxPSI1OCIgeDI9Ijc4IiB5Mj0iNTgiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxsaW5lIHgxPSI1MCIgeTE9IjU4IiB4Mj0iNTAiIHkyPSI0MCIgc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGxpbmUgeDE9IjUwIiB5MT0iNTgiIHgyPSI2MiIgeTI9IjU4IiBzdHJva2U9IiMyMjIiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI1MCIgY3k9IjU4IiByPSIzIiBmaWxsPSIjMjIyIi8+PC9zdmc+"
+            alt="clock icon" width="26" height="26" style="
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 4px;
+          " />
+          This code will expire in a 10 minutes for security purposes.
+        </p>
+        <p class="message normal black text-center">
+          If you didn’t request this code, you can safely ignore this email.
+        </p>
+        <p class="message normal black text-center">
+          We’re excited to help you organize your classes and turn lectures into
+          powerful study tools.
+        </p>
+        <p class="template-thankyou-message black">— The Rubitt Team</p>
+      </div>
+    </div>
+
+    <%- include('../partials/footer.ejs') %>
+</div>

@@ -1,0 +1,52 @@
+<!-- views/contact.ejs -->
+<%- include('./partials/header.ejs') %>
+
+<section class="contact-page">
+    <div class="container">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1 class="contact-title fs-32 fw-700">Contact Us</h1>
+                <p class="contact-subtitle fs-16">Have a question or feedback? We'd love to hear from you.</p>
+            </div>
+
+            <!-- Success Message -->
+            <div id="successMessage" class="alert-success" style="display: none;">
+                ✓ Message sent successfully! We'll get back to you soon.
+            </div>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="alert-error" style="display: none;">
+                ✗ Failed to send message. Please try again.
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label fs-14 fw-500">First name</label>
+                        <input type="text" id="firstName" name="firstName" class="form-input fs-16" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="form-label fs-14 fw-500">Last name</label>
+                        <input type="text" id="lastName" name="lastName" class="form-input fs-16" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label fs-14 fw-500">Email</label>
+                    <input type="email" id="email" name="email" class="form-input fs-16" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label fs-14 fw-500">Message</label>
+                    <textarea id="message" name="message" class="form-textarea fs-16" rows="6" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit fs-16 fw-500" id="submitBtn">
+                    Send message
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include('./partials/footer.ejs') %>

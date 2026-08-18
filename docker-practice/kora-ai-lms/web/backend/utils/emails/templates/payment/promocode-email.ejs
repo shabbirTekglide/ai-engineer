@@ -1,0 +1,59 @@
+<div class="main-container">
+    <%- include('../partials/header.ejs') %>
+
+        <div class="template-banner">
+            <div class="text-field">
+                <h1 class="fs-32 fw-700 text-dark">Your Promo Code</h1>
+            </div>
+        </div>
+
+        <div class="template-container">
+            <div class="inner-container">
+                <h2 class="message normal black text-center fs-24 fw-700">Hi there,</h2>
+                <p class="message normal black text-center fs-16 fw-400">
+                    <%= description %>
+                </p>
+
+                <h2 class="message bold black text-center fs-18 fw-700">Your exclusive promo code:</h2>
+                <!-- Reusing the same .otp-box style to keep the prominent code box -->
+                <div class="otp-box  fs-48 fw-800">
+                    <%= promocode %>
+                </div>
+
+                <!-- Details section – uses existing message classes for consistency -->
+                <div class="promo-details">
+                    <p class="message normal black fs-16 fw-400">
+                        <strong class="fw-700">Expiry Date:</strong>
+                        <%= expiryDate %>
+                    </p>
+                    <p class="message normal black fs-16 fw-400">
+                        <strong class="fw-700">Number of uses:</strong>
+                        <%= uses %>
+                    </p>
+                    <p class="message normal black fs-16 fw-400">
+                        <strong class="fw-700">Email:</strong>
+                        <%= email %>
+                    </p>
+                    <p class="message normal black fs-16 fw-400">
+                        <strong class="fw-700">Plan:</strong>
+                        <%= plan %>
+                    </p>
+                </div>
+
+                <p class="message normal black text-center fs-16 fw-400">
+                    This code will expire on <strong class="fw-700">
+                        <%= expiryDate %>
+                    </strong> and can be used up to <strong class="fw-700">
+                        <%= uses %>
+                    </strong> times.
+                </p>
+                <p class="message normal black text-center fs-16 fw-400">
+                    If you have any questions, feel free to contact us.
+                </p>
+
+                <p class="template-thankyou-message black  fs-16 fw-600">— The Rubitt Team</p>
+            </div>
+        </div>
+
+        <%- include('../partials/footer.ejs') %>
+</div>

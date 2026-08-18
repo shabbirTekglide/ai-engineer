@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: ./backend
+
+    container_name: kora-backend-dev
+
+    ports:
+      - "5000:3000"
+
+    env_file:
+      - ./backend/.env
+
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+
+    command: npm run dev
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: kora-frontend-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev
+    depends_on:
+      - backend

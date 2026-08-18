@@ -1,0 +1,36 @@
+# Node modules for both frontend and backend
+/node_modules/
+
+# Vite specific files (frontend)
+.vite/
+
+# Build output for both frontend and backend
+/dist/
+/build/
+
+# Log files
+*.log
+
+# .env files (both frontend and backend should have .env files for config)
+.env
+.env.local
+.env.*.local
+
+# Dependency manager logs
+yarn-error.log
+npm-debug.log
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Ignore any temp files (both frontend and backend)
+*.tmp
+
+# Ignore frontend's React specific files
+frontend/node_modules/
+frontend/.vite/
+
+# Ignore backend's temporary and build files
+backend/node_modules/
+backend/build/

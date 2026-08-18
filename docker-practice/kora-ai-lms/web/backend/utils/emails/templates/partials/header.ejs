@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @font-face {
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 400;
+      src: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxP.woff2") format("woff2");
+    }
+
+    @font-face {
+      font-family: "Outfit";
+      font-style: normal;
+      font-weight: 400;
+      src: url("https://fonts.gstatic.com/s/outfit/v12/QGYyz_MVcBeNP4NjuGk.woff2") format("woff2");
+    }
+
+    .inboxWarpMain .inbox-data-content .inbox-data-content-intro {
+      padding: 0 !important;
+    }
+
+    .header-container-wrapper {
+      margin-bottom: 20px;
+    }
+
+    body {
+      font-family: "Outfit", "Roboto", Arial, sans-serif;
+    }
+
+    .font-30 {
+      font-size: 30px !important;
+    }
+
+    .white {
+      color: #fff;
+    }
+
+    .black {
+      color: #000;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .h3 {
+      font-size: 38px !important;
+    }
+
+    .text-700 {
+      font-weight: 700;
+    }
+
+    .main-container {
+      max-width: 850px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .template-header {
+      margin: 50px auto 0px auto;
+      max-width: 260px;
+      width: 100%;
+      display: flex;
+      justify-content: center !important;
+      align-items: center;
+    }
+
+    .template-header .image {
+      max-width: 80px;
+      height: 80px;
+      width: 80%;
+    }
+
+    .template-header .image img {
+      width: 100%;
+    }
+
+    .template-banner {
+      background-color: #6F2CCA;
+      min-height: 65px;
+    }
+
+    .template-banner .text-field h1 {
+      font-weight: 600;
+      font-size: 37px;
+      line-height: 40px;
+      color: #fff;
+      text-align: center;
+      padding: 13px;
+      text-transform: capitalize;
+    }
+
+    .template-container {
+      max-width: 750px;
+      width: 100%;
+      margin: 50px auto 50px auto;
+      padding: 0 20px;
+    }
+
+    .template-container .otp-box {
+      font-weight: 600;
+      font-size: 80px;
+      line-height: 40px;
+      text-align: center;
+      color: #6F2CCA;
+      margin: 30px 0 70px 0;
+    }
+
+    .template-container .bold {
+      font-weight: bold;
+    }
+
+    .template-container .normal {
+      font-weight: 400;
+    }
+
+    .template-container .message {
+      font-size: 22px;
+      line-height: 40px;
+      margin: 20px 0;
+      color: #000;
+    }
+
+    .template-container .template-thankyou-message {
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 40px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .template-footer {
+      text-align: center;
+      background-color: #6F2CCA;
+      text-align: center;
+      padding: 8px 0;
+    }
+
+    .template-footer p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 40px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .template-footer a {
+      color: #fff;
+    }
+
+    .template-btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto;
+      max-width: 550px;
+      width: 100%;
+    }
+
+    .template-btn {
+      min-width: 550px;
+      height: 66px;
+      font-weight: 600;
+      font-size: 28px;
+      line-height: 66px;
+      color: #fff !important;
+      display: inline-block;
+      border-radius: 3px;
+      background-color: #6F2CCA;
+      text-decoration: none !important;
+    }
+
+    .template-container .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
+
+    .template-container .summary-table td {
+      padding: 6px 4px;
+      border: none;
+      border-bottom: 1px solid #d2d2d2;
+      vertical-align: top;
+      font-size: 20px;
+      color: #000;
+      line-height: 40px;
+    }
+
+    .template-container .summary-table .bold {
+      font-weight: 500;
+    }
+
+    .template-container .summary-table .normal {
+      font-weight: 400;
+    }
+
+    .helper-message {
+      background-color: #f8f8f8;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 40px;
+      padding: 13px 19px 13px 60px;
+      color: #7d7e80;
+    }
+
+    .loan-schedule-heading {
+      margin: 50px 0 25px 0;
+    }
+
+    .page-footer,
+    footer {
+      padding: 0 !important;
+      background-color: transparent !important;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header-container-wrapper">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top: 50px">
+      <tr>
+        <td align="center">
+          <table role="presentation" cellpadding="0" cellspacing="0" width="260">
+            <tr>
+              <td align="center" style="padding: 0">
+                <img src="https://koralearning.com/images/newImages/rubitt-lamp.png" alt="Rubitt Logo" width="80"
+                  height="80" style="
+                      display: block;
+                      border: 0;
+                      outline: none;
+                      text-decoration: none;
+                    " />
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </header>
+</body>
+
+</html>

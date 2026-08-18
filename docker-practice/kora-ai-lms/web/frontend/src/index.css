@@ -1,0 +1,862 @@
+/* Load Tailwind v4 */
+@import "tailwindcss";
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+/* Dark mode via .dark on <html> or <body> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Rebranding Colors  */
+/* button color  */
+/* #6F2CCA */
+
+/* text color  */
+/* #320C85 */
+
+/* link color */
+/* #9144E0 */
+
+/* hover */
+/* #550dba */
+
+/* Gradient Color  */
+/* bg-[linear-gradient(90deg, #9144E0, #6F2CCA)] */
+
+/* ---- RAW TOKENS (light & dark) ---- */
+:root {
+  --background: 240 60% 99%;
+  --foreground: 240 10% 3.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  --primary: 220 85% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 4.8% 95.9%;
+  --secondary-foreground: 240 5.9% 10%;
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  --accent: 260 85% 65%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 220 85% 60%;
+  --chart-1: 12 76% 61%;
+  --chart-2: 173 58% 39%;
+  --chart-3: 197 37% 24%;
+  --chart-4: 43 74% 66%;
+  --chart-5: 27 87% 67%;
+  --radius: 0.8rem;
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 220 85% 60%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 260 85% 65%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 220 85% 60%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+/* ---- MAP TOKENS TO TAILWIND THEME ---- */
+@theme inline {
+  /* Fonts (optional) */
+  --font-body: Inter, sans-serif;
+  --font-headline: Inter, sans-serif;
+  --font-code: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Colors => utilities like bg-background, text-foreground, border-border */
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+
+  /* Radii => rounded-lg/md/sm use these */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+/* ---- BASE RESETS USING YOUR THEME ---- */
+@layer base {
+
+  /* This sets only the border color. You still need 'border' on elements to see a line */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('/assets/fonts/Outfit/Outfit-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Outfit-bold';
+  src: url('/assets/fonts/Outfit/Outfit-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Apply Poppins Globally */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* add event dialoag  */
+.calendar-date-picker .calendar-main .gap-4 {
+  gap: 0;
+}
+
+.calendar-date-picker .calendar-main .space-y-4.w-full.p-4 {
+  padding: 0;
+}
+
+.calendar-date-picker .calendar-main table tbody td {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.calendar-date-picker .calendar-main table tbody td button {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+
+/* react big calendar  */
+.rbc-calendar {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.rbc-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.rbc-toolbar button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.rbc-toolbar button:hover {
+  background-color: #574bff;
+}
+
+.rbc-month-view {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.rbc-month-row+.rbc-month-row {
+  border-top: 1px solid #f0f0f0;
+}
+
+.rbc-date-cell {
+  color: #333;
+  font-weight: 500;
+  padding: 6px;
+}
+
+.rbc-today {
+  background: rgba(108, 99, 255, 0.08);
+  border-radius: 8px;
+}
+
+.rbc-event {
+  border: none;
+}
+
+.rbc-event:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+@media screen and (max-width: 570px) {
+  .filters-btn-container {
+    flex-direction: column;
+  }
+
+  .filters-btn-container .this-term-btn,
+  .filters-btn-container .weekdays-btn {
+    width: 100%;
+  }
+}
+
+.custom-date-cell {
+  cursor: pointer;
+}
+
+.selected-date {
+  background-color: #d1e8ff !important;
+  border-radius: 6px;
+}
+
+/* ============================================
+   NOTES CONTAINER - Restore HTML default styles
+   Overrides Tailwind Preflight for proper HTML rendering
+   ============================================ */
+
+.notes-container {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #111827;
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0px !important;
+}
+
+.notes-container .content {
+  padding: 10px !important;
+}
+
+/* Headings */
+.notes-container h1 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0.5em 0;
+  line-height: 1.2;
+}
+
+.notes-container h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin: 0.6em 0;
+  line-height: 1.3;
+}
+
+.notes-container h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0.75em 0;
+  line-height: 1.4;
+}
+
+.notes-container h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 1em 0;
+}
+
+.notes-container h5,
+.notes-container h6 {
+  font-size: 0.95em;
+  font-weight: 600;
+  margin: 1em 0;
+}
+
+/* Paragraphs */
+.notes-container p {
+  margin: 0.75em 0;
+}
+
+/* Bold and Strong */
+.notes-container strong,
+.notes-container b {
+  font-weight: 700;
+}
+
+/* Italic and Emphasis */
+.notes-container em,
+.notes-container i {
+  font-style: italic;
+}
+
+/* Lists */
+.notes-container ul {
+  list-style-type: disc;
+  margin: 0.75em 0;
+  padding-left: 1.25em;
+}
+
+.notes-container ol {
+  list-style-type: decimal;
+  margin: 0.75em 0;
+  padding-left: 1.25em;
+}
+
+.notes-container li {
+  margin: 0.3em 0;
+  display: list-item;
+}
+
+.notes-container ul ul,
+.notes-container ol ul {
+  list-style-type: circle;
+  margin: 0.3em 0;
+}
+
+.notes-container ul ul ul,
+.notes-container ol ol ul,
+.notes-container ul ol ul {
+  list-style-type: square;
+}
+
+.notes-container li>ul,
+.notes-container li>ol {
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+/* Links */
+.notes-container a {
+  color: #2563eb;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.notes-container a:hover {
+  color: #1d4ed8;
+}
+
+/* Blockquotes */
+.notes-container blockquote {
+  border-left: 3px solid #2160A0;
+  margin: 0.75em 0;
+  padding: 0.4em 0.75em;
+  background-color: #f9fafb;
+  font-style: italic;
+}
+
+/* Code */
+.notes-container code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background-color: #f3f4f6;
+  padding: 0.1em 0.2em;
+  border-radius: 4px;
+  font-size: 0.85em;
+  word-break: break-all;
+}
+
+.notes-container pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background-color: #1f2937;
+  color: #f9fafb;
+  padding: 0.75em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 0.75em 0;
+  font-size: 0.8em;
+}
+
+.notes-container pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+  word-break: normal;
+}
+
+/* Tables - scrollable on mobile */
+.notes-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  font-size: 0.85em;
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.notes-container th {
+  background-color: #E7F1FB;
+  border: 1px solid #d0dae4;
+  padding: 0.4em 0.5em;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.notes-container td {
+  border: 1px solid #d0dae4;
+  padding: 0.4em 0.5em !important;
+}
+
+.notes-container tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Horizontal Rule */
+.notes-container hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1.25em 0;
+}
+
+/* Images */
+.notes-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.75em 0;
+}
+
+/* Definition Lists */
+.notes-container dl {
+  margin: 0.75em 0;
+}
+
+.notes-container dt {
+  font-weight: 600;
+  margin-top: 0.75em;
+}
+
+.notes-container dd {
+  margin-left: 1.25em;
+  margin-top: 0.2em;
+}
+
+/* Subscript and Superscript */
+.notes-container sub {
+  font-size: 0.75em;
+  vertical-align: sub;
+}
+
+.notes-container sup {
+  font-size: 0.75em;
+  vertical-align: super;
+}
+
+/* Mark/Highlight */
+.notes-container mark {
+  background-color: #fef08a;
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
+}
+
+/* Small text */
+.notes-container small {
+  font-size: 0.875em;
+}
+
+/* Abbreviations */
+.notes-container abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* Keyboard input */
+.notes-container kbd {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  background-color: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+  font-size: 0.85em;
+  box-shadow: 0 1px 0 #d1d5db;
+}
+
+/* Figures */
+.notes-container figure {
+  margin: 1em 0;
+  max-width: 100%;
+}
+
+.notes-container figcaption {
+  font-size: 0.8em;
+  color: #6b7280;
+  margin-top: 0.4em;
+  text-align: center;
+}
+
+/* Details/Summary */
+.notes-container details {
+  margin: 0.75em 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.4em 0.75em;
+}
+
+.notes-container summary {
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.4em 0;
+}
+
+.notes-container details[open] summary {
+  margin-bottom: 0.4em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* ============================================
+   DESKTOP - 768px and above
+   ============================================ */
+@media (min-width: 768px) {
+  .notes-container {
+    font-size: 16px;
+  }
+
+  .notes-container h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  .notes-container h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+  }
+
+  .notes-container h3 {
+    font-size: 1.25em;
+    margin: 1em 0;
+  }
+
+  .notes-container h4 {
+    font-size: 1.1em;
+    margin: 1.33em 0;
+  }
+
+  .notes-container h5,
+  .notes-container h6 {
+    font-size: 1em;
+    margin: 1.5em 0;
+  }
+
+  .notes-container p {
+    margin: 1em 0;
+  }
+
+  .notes-container ul,
+  .notes-container ol {
+    margin: 1em 0;
+    padding-left: 2em;
+  }
+
+  .notes-container li {
+    margin: 0.5em 0;
+  }
+
+  .notes-container blockquote {
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border-left-width: 4px;
+  }
+
+  .notes-container pre {
+    padding: 1em;
+    margin: 1em 0;
+    font-size: 0.9em;
+  }
+
+  .notes-container table {
+    display: table;
+    font-size: 1em;
+  }
+
+  .notes-container th,
+  .notes-container td {
+    padding: 0.75em;
+  }
+
+  .notes-container hr {
+    margin: 2em 0;
+  }
+
+  .notes-container details {
+    padding: 0.5em 1em;
+  }
+
+  .notes-container dd {
+    margin-left: 2em;
+  }
+}
+
+/* time picker modal in add class  */
+
+.react-time-picker__wrapper {
+  border: none !important;
+  padding: 0 !important;
+}
+
+.react-time-picker__inputGroup {
+  min-width: 100% !important;
+}
+
+.react-time-picker__inputGroup__input {
+  outline: none !important;
+}
+
+.react-time-picker__inputGroup__amPm {
+  appearance: none !important;
+}
+
+/* promo code calendar  */
+.promo-code-calendar-dialog .gap-4 {
+  gap: 0px;
+}
+
+.promo-code-calendar-dialog .space-y-4.w-full.p-4 {
+  padding: 0;
+}
+
+.promo-code-calendar-dialog .space-y-4.w-full.p-4 tbody td {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  display: flex;
+}
+
+.promo-code-calendar-dialog .space-y-4.w-full.p-4 tbody td button {
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+@media screen and (max-width:464px) {
+  .view-calendar-btn {
+    min-width: 115px;
+  }
+
+  .view-calendar-btn a {
+    text-decoration: underline;
+  }
+
+  .view-calendar-btn button {
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
+.pdf-page canvas {
+  display: block;
+  /* removes inline bottom gap */
+  margin: 0 auto;
+}
+
+.pdf-document {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* react date picker calendar in profile  */
+/* ===== Clear (X) Button ===== */
+.react-datepicker__close-icon::after {
+  background-color: #7c3aed !important;
+  color: white !important;
+  font-size: 15px !important;
+  border-radius: 50% !important;
+  width: 17px !important;
+  height: 17px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* ===== Popper / Calendar Container ===== */
+.react-datepicker {
+  border: none !important;
+  border-radius: 16px !important;
+  font-family: inherit !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 60px rgba(124, 58, 237, 0.15), 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+
+}
+
+.react-datepicker__triangle {
+  display: none !important;
+}
+
+/* ===== Header ===== */
+.react-datepicker__header {
+  background: #7c3aed !important;
+  border-bottom: none !important;
+  padding: 16px 12px 12px !important;
+  border-radius: 0 !important;
+}
+
+.react-datepicker__current-month {
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Month & Year dropdowns */
+.react-datepicker__month-select,
+.react-datepicker__year-select {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 8px !important;
+  padding: 4px 8px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  outline: none !important;
+}
+
+.react-datepicker__month-select option,
+.react-datepicker__year-select option {
+  background: #6d28d9 !important;
+  color: white !important;
+}
+
+/* Nav arrows */
+.react-datepicker__navigation {
+  top: 18px !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: white !important;
+  border-width: 2px 2px 0 0 !important;
+}
+
+.react-datepicker__navigation:hover .react-datepicker__navigation-icon::before {
+  border-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ===== Day Names Row ===== */
+.react-datepicker__day-names {
+  background: #f5f3ff !important;
+  margin: 0 !important;
+  padding: 8px 0 4px !important;
+}
+
+.react-datepicker__day-name {
+  color: #7c3aed !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+  width: 36px !important;
+  line-height: 36px !important;
+}
+
+/* ===== Month / Days Body ===== */
+.react-datepicker__month {
+  background: white !important;
+  margin: 0 !important;
+  padding: 10px 8px 12px !important;
+}
+
+.react-datepicker__day {
+  width: 36px !important;
+  line-height: 36px !important;
+  border-radius: 50% !important;
+  color: #374151 !important;
+  font-size: 13px !important;
+  transition: all 0.15s ease !important;
+}
+
+.react-datepicker__day:hover {
+  background: #ede9fe !important;
+  color: #7c3aed !important;
+  border-radius: 50% !important;
+}
+
+/* Selected day */
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: linear-gradient(135deg, #7A69E2, #976AF2) !important;
+  color: white !important;
+  border-radius: 50% !important;
+  font-weight: 700 !important;
+}
+
+.react-datepicker__day--selected:hover {
+  background: linear-gradient(135deg, #6d28d9, #7c3aed) !important;
+  color: white !important;
+}
+
+/* Today */
+.react-datepicker__day--today {
+  font-weight: 700 !important;
+  color: #7c3aed !important;
+  text-decoration: underline !important;
+}
+
+/* Outside month days */
+.react-datepicker__day--outside-month {
+  color: #d1d5db !important;
+}
+
+/* Disabled days */
+.react-datepicker__day--disabled {
+  color: #e5e7eb !important;
+  cursor: not-allowed !important;
+}
+
+.react-datepicker__day--disabled:hover {
+  background: transparent !important;
+}

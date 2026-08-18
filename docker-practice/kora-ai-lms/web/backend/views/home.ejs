@@ -1,0 +1,510 @@
+<%- include('./partials/header.ejs') %>
+
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-card">
+                <h1 class="hero-title">Welcome to Rubitt</h1>
+
+                <div class="hero-subtitle">
+                    <span class="typing-wrapper">
+                        <span id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </span>
+                    <!-- SEO-safe fallback -->
+                    <span class="seo-text">
+                        Simplify your studies. Organize your tasks. Ace your exams.
+                    </span>
+                </div>
+                <p class="hero-description">
+                    Rubitt transforms your lectures into notes, flashcards, quizzes, and study guides, while
+                    keeping your classes, tasks, and study plan organized.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-md free-trial-btn"><span> Start Your Free Trial</span><svg
+                            style="width: 1rem; height: 1rem;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2">
+                            <path d="M5 12h14"></path>
+                            <path d="m12 5 7 7-7 7"></path>
+                        </svg></button>
+                    <a class="btn btn-secondary learn-more-btn" href="#learn-more" class="btn btn-secondary"><span>Learn
+                            more</span><span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo section  -->
+    <section class="demo-section">
+        <div class="container">
+            <div class="container-inner">
+                <div class="demo-content">
+                    <span class="demo-badge">See it in action</span>
+                    <h2 class="demo-title fs-32 fw-700">Watch a quick demo</h2>
+                    <p class="demo-description fs-16 fw-500">
+                        See how Rubitt can transform your study workflow in just a few clicks.
+                    </p>
+
+                    <div class="video-wrapper" id="videoWrapper">
+                        <video id="demoVideo" class="video-player" poster="" preload="metadata" playsinline>
+                            <source src="/videos/kora.webm" type="video/webm">
+                            <source src="/videos/kora.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <div class="video-overlay" id="videoOverlay">
+                            <div class="play-button" id="playButton">
+                                <div class="play-icon"></div>
+                            </div>
+                        </div>
+
+                        <!-- Custom Video Controls (appear on hover when playing) -->
+                        <div class="custom-controls" id="customControls">
+                            <div class="controls-overlay">
+                                <button class="control-btn" id="playPauseBtn">
+                                    <svg class="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+                                    </svg>
+                                </button>
+                                <div class="progress-container">
+                                    <input type="range" class="progress-bar" id="progressBar" min="0" max="100"
+                                        value="0">
+
+                                </div>
+                                <button class="control-btn" id="volumeBtn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                                    </svg>
+                                </button>
+                                <button class="control-btn" id="fullscreenBtn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                        <path
+                                            d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="learn-more">
+        <div class="container">
+            <div class="container-inner">
+                <div class="features-header">
+                    <span class="features-badge">Study Smarter</span>
+                    <h2 class="features-title fs-32 fw-700">Everything you need to excel</h2>
+                    <p class="features-description">
+                        Rubitt is packed with features designed to automate the tedious parts of studying, so you can
+                        focus on
+                        understanding.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                                        <line x1="12" x2="12" y1="19" y2="22" />
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">Lecture Recording & Transcription</h3>
+                            </div>
+
+                            <p class="feature-text fs-16">Record lectures directly in the app. Rubitt provides a precise
+                                transcript,
+                                ready for AI processing.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/lecture-recording.webp" alt="Lecture Recording">
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card feature-card-reverse">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-bot h-12 w-12 flex-none text-primary p-2 bg-primary/10 rounded-lg"
+                                        aria-hidden="true">
+                                        <path d="M12 8V4H8"></path>
+                                        <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+                                        <path d="M2 14h2"></path>
+                                        <path d="M20 14h2"></path>
+                                        <path d="M15 13v2"></path>
+                                        <path d="M9 13v2"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">AI-Powered Note Generation</h3>
+                            </div>
+
+                            <p class="feature-text">Transform hours of lectures into concise, organized notes. Focus on
+                                what's important without the manual effort.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/note-generation.webp" alt="AI Note Generation">
+                        </div>
+
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-book-open h-12 w-12 flex-none text-primary p-2 bg-primary/10 rounded-lg"
+                                        aria-hidden="true">
+                                        <path d="M12 7v14"></path>
+                                        <path
+                                            d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">Study Guides</h3>
+                            </div>
+                            <p class="feature-text">Rubitt creates a comprehensive study guide by grouping related
+                                concepts
+                                from your lecture for focused, interactive study sessions.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/study-guides.webp" alt="Study Guides">
+                        </div>
+                    </div>
+
+
+
+                    <!-- Feature 4 -->
+                    <div class="feature-card feature-card-reverse">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-layers h-12 w-12 flex-none text-primary p-2 bg-primary/10 rounded-lg"
+                                        aria-hidden="true">
+                                        <path
+                                            d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z">
+                                        </path>
+                                        <path
+                                            d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12">
+                                        </path>
+                                        <path
+                                            d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">Smart Flashcard Creation</h3>
+                            </div>
+
+                            <p class="feature-text">Automatically generate flashcards from key concepts in your lectures
+                                to make studying and memorization a breeze.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/smart-flashcard.webp" alt="AI Note Generation">
+                        </div>
+                    </div>
+
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-clipboard-check h-12 w-12 flex-none text-primary p-2 bg-primary/10 rounded-lg"
+                                        aria-hidden="true">
+                                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                                        <path
+                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                        </path>
+                                        <path d="m9 14 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">Practice Quizzes</h3>
+                            </div>
+
+                            <p class="feature-text">Test your knowledge with AI-generated practice quizzes that help you
+                                prepare for exams and retain information.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/practice-quizzes.webp" alt="Practice Quizzes">
+                        </div>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="feature-card feature-card-reverse">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-cloud-upload h-12 w-12 flex-none text-primary p-2 bg-primary/10 rounded-lg"
+                                        aria-hidden="true">
+                                        <path d="M12 13v8"></path>
+                                        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
+                                        <path d="m8 17 4-4 4 4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">Syllabus Sync</h3>
+                            </div>
+
+                            <p class="feature-text">Upload your syllabus and Rubitt will automatically populate your
+                                calendar with due dates and send you reminders.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/syllabus-sync.webp" alt="Syllabus Sync">
+                        </div>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="feature-card">
+                        <div class="feature-content">
+                            <div class="feature-main">
+                                <div class="feature-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="lucide lucide-clipboard-check h-12 w-12 flex-none text-primary p-2 bg-primary/10 rounded-lg"
+                                        aria-hidden="true">
+                                        <rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect>
+                                        <path
+                                            d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2">
+                                        </path>
+                                        <path d="m9 14 2 2 4-4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="feature-title fs-24 fw-700">Integrated Calendar</h3>
+                            </div>
+
+                            <p class="feature-text">A powerful calendar to organize your academic life, with
+                                syllabus-synced events and custom reminders.</p>
+                        </div>
+                        <div class="feature-image">
+                            <img src="/images/home/integrated-calendar.webp" alt="Integrated Calendar">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Devices Section -->
+    <section class="devices-section">
+        <div class="container">
+            <div class="container-inner">
+                <div class="devices-header">
+                    <h2 class="devices-title fs-32 fw-700">Available on All Your Devices</h2>
+                    <p class="devices-description fs-18">
+                        Study anywhere, anytime. Rubitt syncs your content seamlessly across the web and our native
+                        mobile
+                        app.
+                    </p>
+                </div>
+
+                <div class="devices-grid">
+                    <!-- Web Platform -->
+                    <div class="device-card">
+                        <div class="device-header">
+                            <div class="device-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="14" x="2" y="3" rx="2" />
+                                    <line x1="8" x2="16" y1="21" y2="21" />
+                                    <line x1="12" x2="12" y1="17" y2="21" />
+                                </svg>
+                            </div>
+                            <div class="device-info">
+                                <h3 class="device-name fs-20 fw-700">Web Platform</h3>
+                                <p class="device-subtitle fs-14 text-light-gray">Full-featured desktop experience.</p>
+                            </div>
+                        </div>
+                        <div class="device-image-wrapper">
+                            <img src="/images/home/web-platform.webp" alt="Web Platform" class="device-image">
+                        </div>
+
+                    </div>
+
+                    <!-- Mobile App -->
+                    <div class="device-card">
+                        <div class="device-header">
+                            <div class="device-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
+                                    <path d="M12 18h.01" />
+                                </svg>
+                            </div>
+                            <div class="device-info">
+                                <h3 class="device-name fs-20 fw-700">Mobile App</h3>
+                                <p class="device-subtitle fs-14 text-light-gray">Record and study on the go.</p>
+                            </div>
+                        </div>
+                        <div class="device-image-wrapper">
+                            <img src="/images/home/mobile-app.webp" alt="Mobile App" class="device-image">
+                        </div>
+                        <div class="app-store-buttons">
+                            <a href="#" class="store-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                                </svg>
+                                <span>App Store</span>
+                            </a>
+                            <a href="#" class="store-button">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
+                                </svg>
+                                <span>Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <div class="container">
+            <div class="container-inner">
+                <div class="trust-header">
+                    <h2 class="trust-title fs-32 fw-700">Why Students Trust Rubitt</h2>
+                    <p class="trust-description fs-18">
+                        We're committed to building a study platform that respects your privacy and secures your data.
+                    </p>
+                </div>
+
+                <div class="trust-grid">
+                    <!-- Trust Card 1 -->
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="trust-icon">
+                                <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                        </div>
+                        <h3 class="trust-card-title fs-20 fw-700">Your Data Stays Private</h3>
+                        <p class="trust-card-text fs-14 ">
+                            Lecture recordings are deleted immediately. Your study materials belong to you.
+                        </p>
+                    </div>
+
+                    <!-- Trust Card 2 -->
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-brain-circuit h-10 w-10 text-primary">
+                                <path
+                                    d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z">
+                                </path>
+                                <path d="M9 13a4.5 4.5 0 0 0 3-4"></path>
+                                <path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"></path>
+                                <path d="M3.477 10.896a4 4 0 0 1 .585-.396"></path>
+                                <path d="M6 18a4 4 0 0 1-1.967-.516"></path>
+                                <path d="M12 13h4"></path>
+                                <path d="M12 18h6a2 2 0 0 1 2 2v1"></path>
+                                <path d="M12 8h8"></path>
+                                <path d="M16 8V5a2 2 0 0 1 2-2"></path>
+                                <circle cx="16" cy="13" r=".5"></circle>
+                                <circle cx="18" cy="3" r=".5"></circle>
+                                <circle cx="20" cy="21" r=".5"></circle>
+                                <circle cx="20" cy="8" r=".5"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="trust-card-title fs-20 fw-700">No AI Training on Your Data</h3>
+                        <p class="trust-card-text fs-14 ">
+                            Your content is used only to generate the materials you request.
+                        </p>
+                    </div>
+
+                    <!-- Trust Card 3 -->
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-book h-10 w-10 text-primary">
+                                <path
+                                    d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="trust-card-title fs-20 fw-700">Built for Real Classrooms</h3>
+                        <p class="trust-card-text fs-14 ">
+                            Created by BVT Publishing — trusted by professors and students for two decades.
+                        </p>
+                    </div>
+
+                    <!-- Trust Card 4 -->
+                    <div class="trust-card">
+                        <div class="trust-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-shield h-10 w-10 text-primary">
+                                <path
+                                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="trust-card-title fs-20 fw-700">Secure by Design</h3>
+                        <p class="trust-card-text fs-14 ">
+                            Encrypted processing and modern infrastructure ensure your information stays protected.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="container-inner">
+
+
+                    <h2 class="cta-title fs-32 fw-700">Start Studying Smarter Today</h2>
+                    <p class="cta-description fs-18">
+                        Get transcripts, notes, flashcards, quizzes, an AI tutor, syllabus sync, and a built-in study
+                        calendar — all in one platform.
+                    </p>
+                    <button class="btn btn-primary btn-md cta-button">
+                        <span>Try Rubitt Free</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <%- include('./partials/footer.ejs') %>

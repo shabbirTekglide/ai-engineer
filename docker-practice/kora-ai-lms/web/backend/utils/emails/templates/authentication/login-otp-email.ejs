@@ -1,0 +1,108 @@
+<%- include('../partials/header.ejs') %>
+
+  <div
+    style="max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background-color: #ffffff;">
+
+    <!-- Logo Section -->
+    <div style="text-align: center; padding: 30px 0;">
+      <!-- <img src="https://nautilusfunding.com/assets/images/nautilusLogo.webp" alt="kora learning" style="max-width: 200px; height: auto;"> -->
+    </div>
+
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h1 style="color: #2c3e50; font-size: 28px; margin: 0; font-weight: 600;">
+        🔐 Two-Factor Authentication
+      </h1>
+      <p style="color: #7f8c8d; font-size: 16px; margin: 10px 0 0 0;">
+        Login Verification Required
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      style="background-color: #f8f9fa; border-radius: 10px; padding: 30px; margin-bottom: 30px; border-left: 4px solid #007bff;">
+      <p style="color: #2c3e50; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
+        Hello <strong>
+          <%= role %>
+        </strong>,
+      </p>
+
+      <p style="color: #2c3e50; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
+        We received a login attempt for your account (<strong>
+          <%= email %>
+        </strong>). To complete your login, please use the following One-Time Password (OTP):
+      </p>
+
+      <!-- OTP Display -->
+      <div style="text-align: center; margin: 30px 0;">
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+                  color: white; 
+                  font-size: 32px; 
+                  font-weight: bold; 
+                  padding: 20px 30px; 
+                  border-radius: 10px; 
+                  letter-spacing: 8px; 
+                  display: inline-block; 
+                  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                  font-family: 'Courier New', monospace;">
+          <%= otp %>
+        </div>
+      </div>
+
+      <!-- Security Notice -->
+      <div
+        style="background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 5px; padding: 15px; margin: 20px 0;">
+        <p style="color: #856404; font-size: 14px; margin: 0; line-height: 1.5;">
+          <strong>⚠️ Security Notice:</strong><br>
+          • This OTP is valid for <strong>10 minutes</strong> only<br>
+          • Do not share this code with anyone<br>
+          • If you didn't attempt to login, please contact support immediately
+        </p>
+      </div>
+
+      <p style="color: #2c3e50; font-size: 14px; line-height: 1.6; margin: 20px 0 0 0;">
+        If you have any issues or didn't request this login, please contact our support team immediately.
+      </p>
+    </div>
+
+    <!-- Action Section -->
+    <div style="text-align: center; margin: 30px 0;">
+      <p style="color: #7f8c8d; font-size: 14px; margin: 0 0 15px 0;">
+        Need help? Contact our support team
+      </p>
+      <a href="mailto:support@koralearning.com" style="background-color: #007bff; 
+              color: white; 
+              padding: 12px 30px; 
+              text-decoration: none; 
+              border-radius: 25px; 
+              font-weight: 600;
+              display: inline-block;
+              transition: background-color 0.3s ease;">
+        Contact Support
+      </a>
+    </div>
+
+    <!-- Security Tips -->
+    <div style="background-color: #e8f4fd; border-radius: 8px; padding: 20px; margin: 30px 0;">
+      <h3 style="color: #2c3e50; font-size: 18px; margin: 0 0 15px 0;">🛡️ Security Tips:</h3>
+      <ul style="color: #2c3e50; font-size: 14px; line-height: 1.6; margin: 0; padding-left: 20px;">
+        <li>Always verify the sender email address</li>
+        <li>Never share your OTP with anyone, including support staff</li>
+        <li>OTP codes expire after 10 minutes for your security</li>
+        <li>If you suspect unauthorized access, change your password immediately</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ecf0f1;">
+      <p style="color: #95a5a6; font-size: 12px; margin: 0 0 10px 0;">
+        This is an automated message from rubitt learning's security system.
+      </p>
+      <p style="color: #95a5a6; font-size: 12px; margin: 0;">
+        © <%= new Date().getFullYear() %> rubitt learning. All rights reserved.
+      </p>
+    </div>
+
+  </div>
+
+  <%- include('../partials/footer.ejs') %>

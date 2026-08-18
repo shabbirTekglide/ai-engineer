@@ -1,0 +1,38 @@
+<div class="main-container">
+      <%- include('../partials/header.ejs') %>
+            <div class="template-banner">
+                  <div class="text-field">
+                        <h1>Welcome to Rubitt learning</h1>
+                  </div>
+            </div>
+
+            <div class="template-container">
+                  <div class="inner-container">
+                        <p class="message bold black">Dear <strong class="capitalize">
+                                    <%= userName %>
+                              </strong>,</p>
+
+                        <p class="message normal black">Thank you for signing up with <strong>Rubitt learning</strong>.
+                              Your account has been created successfully and is currently <strong>
+                                    <%= accountStatus %> approval
+                              </strong>.</p>
+
+                        <p class="message normal black">Once your account is reviewed and approved by our team, you will
+                              receive a confirmation and gain access to all platform features.</p>
+
+                        <p class="message normal black">We’re excited to have you on board and look forward to
+                              supporting your journey.</p>
+
+                        <p class="message normal black">If you have any questions in the meantime, feel free to reach
+                              out to our support team.</p>
+
+                        <p class="message bold black"><strong>Let’s make funding smarter, together.</strong></p>
+
+                        <p class="message text-700 black"><strong>Rubitt learning Team</strong></p>
+
+                  </div>
+            </div>
+
+
+            <%- include('../partials/footer.ejs') %>
+</div>
